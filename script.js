@@ -29,9 +29,8 @@ async function dictionaryResult() {
                             <p class="Meanings">Meaning: ${data[0].meanings[0].definitions[0].definition}</p>
                     </div>
                     </div>`;
-                    sound.setAttribute("src", `${data[0].phonetics[0,1].audio}`);
+                    sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
                 });
-
         });
 
     } catch(error){

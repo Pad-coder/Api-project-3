@@ -26,6 +26,8 @@ header h1{
     height: 80px;
     left: 20px;
     top: 20px;
+    letter-spacing: 2px;
+    text-decoration: underline;
     color: #ffff
 }
 
