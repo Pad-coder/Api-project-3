@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    box-sizing: inherit;
+    background-color: rgb(192, 233, 219);
+}
+
+header {
+    background-color: #0c0222dc;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+    display: flex;
+    position: static;
+}
+
+header h1{
+    position: relative;
+    height: 80px;
+    left: 20px;
+    top: 20px;
+    color: #ffff
+}
+
+.searchbar {
+    position: relative;
+    width: 500px;
+    height: 80px;
+    top: 30px;
+    right: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+input {
+    height: 30px;
+    width: 300px;
+    background-color:transparent;
+    color: rgb(253, 253, 253);
+    border: 0;
+    border-top: 2px solid #ffff;
+    border-bottom: 2px solid #ffff;
+    border-left: 2px solid #ffff;
+    outline: none;
+    border-radius: 0px 0px 0px 7px;
+    font-style: normal;
+    font-size: medium;
+    padding-left: 10px;
+    
+}
+
+input::placeholder {
+    border: none;
+    font-size: larger;
+    color: rgb(252, 252, 252);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn {
+    height: 30px;
+    width: 100px;
+    border: none;
+    margin-left: -1px;
+    border-radius: 0px 7px 0px 0px;
+    font-size: medium;
+    font-weight: bold;
+    columns: rgb(39, 11, 11);
+}
+
+.container {
+   height: 540px;
+    width: 100%;
+    display: flex;
+    position: static;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+}    
+
+.main_container {
+    position: relative;
+    height: 350px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+    padding: 30px;
+    background-color: aqua;
+    border: none;
+    border-radius: 30px;
+    
+}
+
+.word{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 90%;
+    padding-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.word h2{
+    font-size: 40px;
+}
+
+.word .sound_btn{
+    font-size: 18px;
+    color: rgb(137, 137, 238);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+.phonetics, .phonetics p{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    font-size: 16px;
+}
+
+.meaning{
+    position: relative;
+    height: 50;
+    width: 600px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.meaning p{
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:400px) {
+    
+    header h1{
+        font-size: 27px;
+        top: 25px;
+        left: 10px;
+    }
+
+    input{
+        width: 120px;
+        height: 25px;
+        font-size: small;
+    }
+    input::placeholder{
+        font-size: small;
+    }
+
+    .btn{
+        width: 70px;
+        height: 25px;
+        font-size:smaller;
+    }
+    .searchbar {
+        position: relative;
+        width: 150px;
+        height: 80px;
+        top: 30px;
+        right: 10px;
+        display: flex;
+        justify-content: flexend;
+    }
+.container{
+    width: 300px;
+    position: relative;
+    display: flex;
+}
+
+.main_container{
+    width: 250px;
+    left: 8%;
+}
+
+.word h2{
+    font-size: 30px;
+    width: 100px;
+}
+.word button{
+    padding-left: 80px;
+    margin-top: 10px;
+}
+.meaning {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    font-size: 15px;
+}
+
+.phonetics p{
+    width: 100px;
+}
+
+}
