@@ -26,17 +26,27 @@ async function dictionaryResult() {
                         <div class="meaning">
                         <p class="synonyms">Synonyms: ${data[0].meanings[0].synonyms.slice(0, 3)}</p
                         <p class="antonyms">Antonyms: ${data[0].meanings[0].antonyms.slice(0, 3)}</p
-                            <p class="Meanings">Meaning: ${data[0].meanings[0].definitions[0].definition}</p>
+                        <p class="Meanings">Meaning: ${data[0].meanings[0].definitions[0].definition}</p>
                     </div>
                     </div>`;
-                    sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
+                    let audioPlayed = false; // flag to indicate whether audio has been played
+
+                    for (let i = 0; i < data[0].phonetics.length; i++) {
+                        if (data[0].phonetics[i].audio && !audioPlayed) {
+                            sound.setAttribute("src", data[0].phonetics[i].audio);
+
+                            audioPlayed = true; // set flag to true
+                            break; // exit the loop
+                        }
+                    }
                 });
         });
-
+        
     } catch(error){
         console.log(error);
     }
 }
+
 async function audioPlay() {
     sound.play();
 }
